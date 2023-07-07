@@ -1,171 +1,139 @@
-import React from 'react'
-import './About.css'
-import profile_img from "../../assets/Images/profile-img.jpg"
+import React from "react";
+import "./About.css";
+import profile_img from "../../assets/Images/profile-img.jpg";
+import { skill, fact } from "../../mock/mock";
+
+const personalInfo = [
+  { title: "BirthDay", value: "28 march 1999" },
+  { title: "Phone", value: "+92 3360973204" },
+  { title: "City", value: "i-10/1 Islambad, Pakistan" },
+  { title: "Age", value: "24" },
+  { title: "Degree", value: "BS Computer Science" },
+  { title: "Email", value: "itssaloobhai@gmail.com" },
+];
 
 const About = () => {
   return (
     <>
-    <section id="about" className="about">
-    <div className="container" data-aos="fade-up">
+      <section id="about" className="about">
+        <div className="container" data-aos="fade-up">
+          <div className="section-title">
+            <h2>About</h2>
+            <p className="fst-italic">
+              Proficient in MERN stack development, with a strong foundation in
+              JavaScript, React, Node.js, and MongoDB. Experienced in building
+              robust and scalable web applications from concept to deployment.
+              Skilled in front-end development, utilizing React to create
+              responsive and intuitive user interfaces. Proficient in
+              server-side programming using Node.js, developing RESTful APIs and
+              implementing database models with MongoDB. Familiar with modern
+              web development tools and libraries, such as Redux, Express.js,
+              and Mongoose. Excellent problem-solving and communication skills,
+              with a passion for delivering high-quality software solutions.
+            </p>
+          </div>
 
-      <div className="section-title">
-        <h2>About</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div>
-
-      <div className="row">
-        <div className="col-lg-4">
-          <img src={profile_img} className="img-fluid" alt=""/>
-        </div>
-        <div className="col-lg-8 pt-4 pt-lg-0 content">
-          <h3>UI/UX Designer &amp; Web Developer.</h3>
-          <p className="fst-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
-          </p>
           <div className="row">
-            <div className="col-lg-6">
-              <ul>
-                <li><i className="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
-                <li><i className="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
-              </ul>
+            <div className="col-lg-4">
+              <img src={profile_img} className="img-fluid" alt="" />
             </div>
-            <div className="col-lg-6">
-              <ul>
-                <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                <li><i className="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                <li><i className="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>email@example.com</span></li>
-                <li><i className="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-              </ul>
+            <div className="col-lg-8 pt-4 pt-lg-0 content">
+              <h3> WEB DEVELOPER.</h3>
+
+              <div>
+                <ul className="row">
+                  {personalInfo.map((item) => {
+                    return (
+                      <li className="col-lg-6 mt-5">
+                        <i className="bi bi-chevron-right"></i>{" "}
+                        <strong>{item.title}</strong> <span>{item.value}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+              <p className="mt-3">
+                I have work on many project which includes personal project ,
+                feverr project and software house project.
+              </p>
             </div>
           </div>
-          <p>
-            Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-          </p>
         </div>
-      </div>
+      </section>
 
-    </div>
-  </section>
+      {/* <section id="facts" className="facts">
+        <div className="container" data-aos="fade-up">
+          <div className="section-title">
+            <h2>Facts</h2>
+            <p>
+              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
+              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
+              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+              Quia fugiat sit in iste officiis commodi quidem hic quas.
+            </p>
+          </div>
 
-    <section id="facts" className="facts">
-      <div className="container" data-aos="fade-up">
-
-        <div className="section-title">
-          <h2>Facts</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <div className="row">
+            {fact.map((item) => {
+              return (
+                <div className="col-lg-4 col-md-6">
+                  <div className="count-box">
+                    <i className="bi bi-emoji-smile"></i>
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="232"
+                      data-purecounter-duration="1"
+                      className="purecounter"
+                    ></span>
+                    <p>{item.title}</p>
+                    <h4>{item.value}</h4>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
+      </section> */}
+      {/* End Facts Section  */}
 
-        <div className="row">
-
-          <div className="col-lg-3 col-md-6">
-            <div className="count-box">
-              <i className="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" className="purecounter"></span>
-              <p>Happy Clients</p>
-            </div>
+      {/* <!-- ======= Skills Section ======= --> */}
+      <section id="skills" className="skills section-bg">
+        <div className="container" data-aos="fade-up">
+          <div className="section-title">
+            <h2>Skills</h2>
+            <p>
+              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
+              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
+              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+              Quia fugiat sit in iste officiis commodi quidem hic quas.
+            </p>
           </div>
 
-          <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div className="count-box">
-              <i className="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" className="purecounter"></span>
-              <p>Projects</p>
-            </div>
+          <div className="row skills-content">
+            {skill.map((item) => {
+              return (
+                <div className="  col-6 progress">
+                  <span className="skill">
+                    {item.name} <i className="val">{item.value}</i>
+                  </span>
+                  <div className="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style={{ width: item.width }}
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-
-          <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div className="count-box">
-              <i className="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" className="purecounter"></span>
-              <p>Hours Of Support</p>
-            </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div className="count-box">
-              <i className="bi bi-award"></i>
-              <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" className="purecounter"></span>
-              <p>Awards</p>
-            </div>
-          </div>
-
         </div>
-
-      </div>
-    </section>
-     {/* End Facts Section  */}
-
-    {/* <!-- ======= Skills Section ======= --> */}
-    <section id="skills" className="skills section-bg">
-      <div className="container" data-aos="fade-up">
-
-        <div className="section-title">
-          <h2>Skills</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div className="row skills-content">
-
-          <div className="col-lg-6">
-
-            <div className="progress">
-              <span className="skill">HTML <i className="val">100%</i></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div className="progress">
-              <span className="skill">CSS <i className="val">90%</i></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div className="progress">
-              <span className="skill">JavaScript <i className="val">75%</i></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="col-lg-6">
-
-            <div className="progress">
-              <span className="skill">PHP <i className="val">80%</i></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div className="progress">
-              <span className="skill">WordPress/CMS <i className="val">90%</i></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div className="progress">
-              <span className="skill">Photoshop <i className="val">55%</i></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;

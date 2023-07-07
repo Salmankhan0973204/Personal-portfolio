@@ -15,12 +15,9 @@ const Footer = () => {
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
       <div class="copyright">
-        &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Sk</span></strong>. All Rights Reserved
       </div>
-      <div class="credits">
-  
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+     
     </div>
   </footer>
 </div>

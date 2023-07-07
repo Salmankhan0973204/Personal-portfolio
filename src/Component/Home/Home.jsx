@@ -11,7 +11,7 @@ const Home = () => {
           I'm
           <span class="typed">
             <ReactTyped
-              strings={["Designer", "Developer", "Freelancer", "Photographer"]}
+              strings={["Developer", "Freelancer"]}
               typeSpeed={80}
               backSpeed={50}
               loop
